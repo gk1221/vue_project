@@ -1,5 +1,17 @@
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true,
-  publicPath: '/vue_project/dist'
-})
+
+module.exports = {
+    
+    devServer: {
+        proxy: {
+            ["/api/news/text"]:{
+                target:'http://127.0.0.1:8000',
+                changeOrigin:true,
+                pathRewrites:{
+                    ['^' + "/api/news/text"]: ''
+                }
+            }
+            
+            
+        },
+    }
+}
