@@ -81,9 +81,9 @@ router.beforeEach((to, from) => {
 });
 router.afterEach((to, from, failure) => {
     if (!failure) {
-
+        console.log("let's go");
     } else { //跳轉失敗
-        alert("YOU GOT WRONG WAY", failure);
+        console.log("YOU GOT WRONG WAY");
     }
 })
 

@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "bootstrap"
+
+import '@/scss/main.scss'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'

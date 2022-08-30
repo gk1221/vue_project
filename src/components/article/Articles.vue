@@ -2,41 +2,48 @@
     <h1>This is Article</h1>
     <div class="textspace">
         <div class="selection">
-        <ul v-for="(item, index) in tag" :key="item">
-            <li class="li-filter d-flex flex-row justify-content-between align-items-center">
-                <button  class="btn text-filt-but">
-                  
-                        
-                {{index}}
-                </button>
-                <span class="badge bg-warning rounded-pill">{{item}}</span>
-            </li>
-        </ul>
-        <ul>
-            <li class="li-filter d-flex flex-row justify-content-between align-items-center">
-                <button class="btn text-filt-but">
-                    All
-                </button>
-                <span class="badge bg-warning rounded-pill">{{Object.keys(results).length}}</span>
-            </li>
-        </ul>
+          <ul v-for="(item, index) in tag" :key="item">
+              <li class="li-filter d-flex flex-row justify-content-between align-items-center">
+                  <button  class="btn text-filt-but btn-outline-dark">
+                    
+                          
+                  {{index}}
+                  </button>
+                  <span class="mx-2 badge bg-warning rounded-pill">{{item}}</span>
+              </li>
+          </ul>
+          <ul>
+              <li class="li-filter d-flex flex-row justify-content-between align-items-center">
+                  <button class="btn text-filt-but btn-outline-dark">
+                      All
+                  </button>
+                  <span class="mx-2 badge bg-warning rounded-pill">{{Object.keys(results).length}}</span>
+              </li>
+          </ul>
 
-    </div>
+        </div>
         
-              <div class="textlist">
-                <div class="cardlist hvr-grow {{t.tag}}-card cardshow" v-for="(item, index) in results" :key="item" >
-                    <div class="card-body">
-                        <p class="card-text">
-                       
-                            <router-link :to="`/articles/${item.pk}`" class="card-title">{{item.title}}</router-link>
-                            <br> #{{item.tag}}
-                            <br> {{item.time_create}}
-                        </p>
-                    </div>
-                </div>          
-              </div>
+        <div class="textlist">
+          <div></div>
+          <div class="all-card " align="center">
+            <div class="cardlist hvr-grow {{item.tag}} -card cardshow" v-for="(item, index) in results" :key="item" >
+              <div class="card-body">
+                  <p class="card-text">
+                  
+                      <router-link :to="`/articles/${item.pk}`" class="card-title">{{item.title}}</router-link>
+                      <br> #{{item.tag}} 
+                      <br> {{item.time_create}}
+                  </p>
+              </div>   
+              <br/>   
+                                
+            </div>  
+          </div>
+          
+        </div>
                  
     </div>
+
      
          
 </template>

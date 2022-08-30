@@ -4,7 +4,7 @@
 <h2>{{results.title}}</h2>
 <p>{{ pkId }}</p>
 <p v-html="results.body"></p>
-{{results}}
+
 </template>
 
 
