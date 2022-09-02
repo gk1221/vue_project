@@ -1,5 +1,9 @@
 
 module.exports = {
+    publicPath: '/vue_project/'
+    ,
+       
+
     
     devServer: {
         proxy: {
