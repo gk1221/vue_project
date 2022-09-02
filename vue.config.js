@@ -1,5 +1,6 @@
 
 module.exports = {
+    filenameHashing: false,
     publicPath: '/vue_project/'
     ,
        
