@@ -1,7 +1,7 @@
 
 module.exports = {
     filenameHashing: false,
-    publicPath: '/vue_project/dist/'
+    publicPath: '/vue_project/dist/' //for github use
     ,
        
 

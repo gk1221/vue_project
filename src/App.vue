@@ -25,6 +25,10 @@
           </li>
 
           <li class="nav-item">
+            <router-link :to="'/weather'">天氣</router-link>             
+          </li>
+
+          <li class="nav-item">
             <a class=" {{rwd_active}}" href="/rwd">測試介面</a>
           </li>
 
@@ -82,6 +86,10 @@ export default{
     return {
       isLoading: false,
     };
+  },
+
+  mounted() {
+    
   },
   
 

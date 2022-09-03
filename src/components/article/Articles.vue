@@ -4,7 +4,7 @@
         <div class="selection">
           <ul v-for="(item, index) in tag" :key="item">
               <li class="li-filter d-flex flex-row justify-content-between align-items-center">
-                  <button  class="btn text-filt-but btn-outline-dark">
+                  <button  class="btn text-filt-but btn-outline-dark" @click="CardSelect($event)">
                     
                           
                   {{index}}
@@ -26,18 +26,19 @@
         <div class="textlist">
           <div></div>
           <div class="all-card " align="center">
-            <div class="cardlist hvr-grow {{item.tag}} -card cardshow" v-for="(item, index) in results" :key="item" >
-              <div class="card-body">
-                  <p class="card-text">
-                  
-                      <router-link :to="`/articles/${item.pk}`" class="card-title">{{item.title}}</router-link>
-                      <br> #{{item.tag}} 
-                      <br> {{item.time_create}}
-                  </p>
-              </div>   
-              <br/>   
-                                
-            </div>  
+            <div v-for="(item, index) in results" :key="item" >
+              <div class="cardlist hvr-grow cardshow" :class="`${item.tag}-card`" >
+                <div class="card-body">
+                    <p class="card-text">
+                    
+                        <router-link :to="`/articles/${item.pk}`" class="card-title">{{item.title}}</router-link>
+                        <br> #{{item.tag}} 
+                        <br> {{item.time_create}}
+                    </p>
+                </div>            
+              </div>  
+            </div>
+            
           </div>
           
         </div>
@@ -87,6 +88,9 @@ export default ({
     addZero(i) {
       if (i < 10) {i = "0" + i}
       return i;
+    },
+    CardSelect(event){
+      console.log(event);
     }
   }
 })

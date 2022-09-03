@@ -37,6 +37,12 @@ const routes = [{
             import ('../components/testapi')
     },
     {
+        path: '/weather',
+        name: 'weather',
+        component: () =>
+            import ('../components/Weather')
+    },
+    {
         path: '/users/:userId',
         name: 'users',
         component: () =>

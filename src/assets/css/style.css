@@ -1,4 +1,5 @@
 .all-card {
+    display: inline;
     margin: 0px 5px 15px 5px;
     min-width: 1080px;
     max-width: 1080px;
